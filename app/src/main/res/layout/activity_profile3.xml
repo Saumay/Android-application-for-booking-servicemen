@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_profile3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.saumay.knock.ProfileActivity3"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:text="Serviceman's Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:id="@+id/textView4"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/buttonTextColor" />
+
+    <TextView
+        android:text="Bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:id="@+id/textView23"
+        android:layout_below="@+id/textView20"
+        android:layout_alignEnd="@+id/textView20"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@color/buttonTextColor" />
+
+    <TextView
+        android:text="ssssss"
+        android:layout_width="150dp"
+        android:id="@+id/textViewBio"
+        android:layout_alignBaseline="@+id/textView23"
+        android:layout_alignBottom="@+id/textView23"
+        android:layout_alignStart="@+id/textViewPhone"
+        android:layout_height="120dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/buttonTextColor" />
+
+    <TextView
+        android:text="Phone number"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/textViewPhone"
+        android:layout_alignBaseline="@+id/textView20"
+        android:layout_alignBottom="@+id/textView20"
+        android:layout_alignStart="@+id/textViewName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/buttonTextColor" />
+
+    <TextView
+        android:text="ssssx"
+        android:id="@+id/textViewName"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/textView19"
+        android:layout_alignBottom="@+id/textView19"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/buttonTextColor" />
+
+    <TextView
+        android:text="Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView19"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/buttonSMS"
+        android:layout_marginTop="46dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@color/buttonTextColor"
+        />
+
+    <TextView
+        android:text="Phone Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView20"
+        android:layout_below="@+id/textViewName"
+        android:layout_alignEnd="@+id/textView19"
+        android:layout_marginTop="23dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:textColor="@color/buttonTextColor" />
+
+    <Button
+        android:text="Send Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="37dp"
+        android:id="@+id/buttonSMS"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

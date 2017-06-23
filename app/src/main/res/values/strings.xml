@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">knock</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="services_prompt">Choose a country</string>
+
+    <string-array name="services_arrays">
+        <item>Electrician</item>
+        <item>Carpenter</item>
+        <item>Painter</item>
+        <item>Maid</item>
+        <item>Pest Control</item>
+        <item>Mechanic</item>
+    </string-array>
+    <string name="title_activity_profile2">ProfileActivity2</string>
+
+</resources>

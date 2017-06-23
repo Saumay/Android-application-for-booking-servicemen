@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg"
+    tools:context="com.example.saumay.knock.ProfileActivity"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:id="@+id/buttonLogout"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/textViewUserEmail"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/buttonLogout"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Click on the type of service you want"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/buttonLogout"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/buttonTextColor" />
+
+    <ImageButton
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark"
+        android:id="@+id/ib1"
+
+        android:src="@drawable/carpenter"
+
+        android:layout_width="160dp"
+        android:layout_height="140dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark"
+        android:id="@+id/ib3"
+
+        android:src="@drawable/appliance"
+
+        android:layout_marginTop="13dp"
+        android:layout_height="140dp"
+        android:layout_below="@+id/ib1"
+        android:layout_alignParentStart="true"
+        android:layout_width="160dp" />
+
+    <ImageButton
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark"
+        android:id="@+id/ib5"
+
+        android:src="@drawable/paint"
+        android:layout_marginTop="10dp"
+        android:layout_width="160dp"
+        android:layout_height="140dp"
+        android:layout_below="@+id/ib3"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+
+        android:id="@+id/ib2"
+
+        android:src="@drawable/cleaning"
+
+        android:layout_width="160dp"
+        android:layout_height="140dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView2" />
+
+    <ImageButton
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark"
+        android:id="@+id/ib4"
+        android:baseline="@dimen/fab_margin"
+
+        android:src="@drawable/mechanic"
+
+        android:layout_width="160dp"
+        android:layout_height="140dp"
+        android:layout_alignTop="@+id/ib3"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <ImageButton
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark"
+        android:id="@+id/ib6"
+        android:src="@drawable/pest"
+        android:layout_width="160dp"
+        android:layout_height="140dp"
+        android:layout_alignTop="@+id/ib5"
+        android:layout_alignStart="@+id/ib4" />
+
+</RelativeLayout>
