@@ -27,7 +27,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
-
 import java.sql.Ref;
 
 import static com.example.saumay.knock.R.id.radioGroup;
@@ -78,20 +77,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         usersCount = 0;
         defineUser = "User "+usersCount;
 
-
-        //if getCurrentUser does not returns null
         if(firebaseAuth.getCurrentUser() != null){
-            //that means user is already logged in
-            //so close this activity
             finish();
-
-            //and open profile activity
             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
-
-
         }
 
-        //initializing views
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         editTextName = (EditText) findViewById(R.id.editTextName);
@@ -99,7 +89,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textViewSignin = (TextView) findViewById(R.id.textViewSignin);
         rg = (RadioGroup) findViewById(R.id.radioGroup);
         buttonSignup = (Button) findViewById(R.id.buttonSignup);
-        //buttonSignup2 = (Button) findViewById(R.id.buttonSignup2);
         tt = (TextView) findViewById(R.id.textViewBlink);
 
         s = (Spinner) findViewById(R.id.spinner);
@@ -107,12 +96,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         progressDialog = new ProgressDialog(this);
 
-        //attaching listener to button
         buttonSignup.setOnClickListener(this);
-        //buttonSignup2.setOnClickListener(this);
         textViewSignin.setOnClickListener(this);
 
-        //for updating data
         NoOfUsers.addValueEventListener(new ValueEventListener()
         {
             @Override
@@ -121,7 +107,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 //childNoOfUsers.setValue(usersCount+"");
                 usersCount = Integer.parseInt(data);
             }
-
             public void onCancelled(DatabaseError databaseError) {}
         });
 
@@ -147,11 +132,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void registerUser()
     {
-        //getting email and password from edit texts
         String email = editTextEmail.getText().toString().trim();
         String password  = editTextPassword.getText().toString().trim();
 
-        //checking if email and passwords are empty
         if(TextUtils.isEmpty(email)){
             Toast.makeText(this,"Please enter email",Toast.LENGTH_LONG).show();
             return;
@@ -162,18 +145,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        //if the email and password are not empty
-        //displaying a progress dialog
-
         progressDialog.setMessage("Registering Please Wait...");
         progressDialog.show();
 
-        //creating a new user
         firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        //checking if success
                         if(task.isSuccessful())
                         {
                             finish();
@@ -181,7 +159,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             in.putExtra("name", name);
                             startActivity(in);
                         }else{
-                            //display some message here
                             Toast.makeText(MainActivity.this,"Registration Error",Toast.LENGTH_LONG).show();
                         }
                         progressDialog.dismiss();
@@ -232,10 +209,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             Toast.makeText(MainActivity.this,"Registration Error",Toast.LENGTH_LONG).show();
                         }
                         progressDialog.dismiss();
-        -            }
+                    }
                 });
     }
-
 
     @Override
     public void onClick(View view) {
