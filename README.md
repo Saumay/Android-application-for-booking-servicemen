@@ -1,1 +1,1 @@
-# Knock-Knock-app
+# Knock - An Android application for booking servicemen
